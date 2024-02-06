@@ -1,0 +1,112 @@
+@import "../global/variables";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .main-section01 {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+
+    .s01-grid {
+      width: 40%;
+      height: 70%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 10px;
+
+      .grid-1 {
+        grid-column: span 3;
+        grid-row: span 1;
+        background-color: $red;
+      }
+
+      .grid-2 {
+        grid-column: span 1;
+        grid-row: span 3;
+        background-color: $blue;
+      }
+
+      .grid-3 {
+        grid-column: span 2;
+        grid-row: span 2;
+        background-color: $green;
+      }
+
+      .grid-4 {
+        grid-column: span 1;
+        grid-row: span 1;
+        background-color: $yellow;
+      }
+
+      .grid-5 {
+        grid-column: span 1;
+        grid-row: span 2;
+        background-color: $magenta;
+      }
+
+      .grid-6 {
+        grid-column: span 2;
+        grid-row: span 1;
+        background-color: $cyan;
+      }
+
+      .grid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+      }
+
+      .grid:hover {
+        margin: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .s01-texts {
+      width: 45%;
+      height: 70%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 20px 0;
+
+      .title {
+        padding: 20px 30px;
+        font-size: 2.5vw;
+        font-weight: 500;
+
+        .title-strong {
+          font-size: 7vw;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .title-strong:hover {
+          background: linear-gradient(
+            to right,
+            $red,
+            $green,
+            $blue,
+            $magenta,
+            $yellow,
+            $cyan
+          );
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+  }
+}
